@@ -14,7 +14,6 @@ import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
 import webp from 'gulp-webp';
 import sharpOptimizeImages from 'gulp-sharp-optimize-images';
-import webpack from 'webpack-stream';
 
 /* Run BrowserSync server */
 
@@ -45,21 +44,6 @@ task('styles', () => {
     .pipe(browserSync.stream());
 });
 
-/* Bundle JavaScript modules */
-
-task('scripts', () => {
-  return src('src/js/main.js')
-    .pipe(webpack({
-      // mode: 'development',
-      mode: 'production',
-      output: {
-        filename: 'main.min.js',
-      },
-    }))
-    .pipe(dest('build/js'))
-    // .pipe(browserSync.stream());
-});
-
 /* Copy and minify HTML */
 
 task('html', () => {
@@ -81,7 +65,6 @@ task('webp', () => {
 task('watch', () => {
   watch('src/sass/**/*.scss', series('styles'));
   watch('src/*.html', series('html'));
-  watch('src/js/**/*.js', series('scripts'));
 });
 
 /* Empty build folder */
@@ -139,5 +122,5 @@ task('optimizeImages', () => {
 
 /* Run main gulp task */
 
-task('default', parallel('clean', 'copyFiles', 'copyImages', 'styles', 'scripts', 'html', 'webp', 'sprite', 'server', 'watch'));
-task('build', parallel('clean', 'copyFiles', 'optimizeImages', 'styles', 'scripts', 'html', 'webp', 'sprite'));
+task('default', parallel('clean', 'copyFiles', 'copyImages', 'styles', 'html', 'webp', 'server', 'watch'));
+task('build', parallel('clean', 'copyFiles', 'optimizeImages', 'styles', 'html', 'webp'));
