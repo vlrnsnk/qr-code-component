@@ -79,11 +79,8 @@ task('clean', (done) => {
 
 task('copyFiles', (done) => {
   src([
-    'src/*.ico',
+    // 'src/*.ico',
     'src/fonts/**/*',
-    'src/files/**/*',
-    'src/img/favicons/site.webmanifest',
-    'src/img/favicons/browserconfig.xml',
   ], {
     encoding: false,
     base: 'src',
