@@ -34,6 +34,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Built With
 
 - Semantic HTML5 markup
+- BEM class naming convention
 - SASS/SCSS for styling
 - Gulp for automation scripts
 - Mobile-first workflow
