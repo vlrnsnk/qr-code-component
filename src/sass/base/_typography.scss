@@ -2,8 +2,5 @@
 
 body {
   font-family: 'Outfit', 'Tahoma', sans-serif;
-  font-weight: 700;
   -webkit-font-smoothing: antialiased;
-
-  @include abstracts.text-preset-1();
 }

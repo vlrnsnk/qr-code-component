@@ -1,0 +1,32 @@
+@use '../abstracts';
+
+.qr-code {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: abstracts.$color-white;
+  border-radius: 20px;
+  padding: abstracts.$spacing-200;
+  padding-bottom: abstracts.$spacing-500;
+
+  &__image {
+    // margin-bottom: abstracts.$spacing-300;
+    margin-bottom: 21px;
+  }
+
+  &__wrapper {
+    text-align: center;
+    padding: 0 abstracts.$spacing-200;
+  }
+
+  &__heading {
+    margin-bottom: abstracts.$spacing-200;
+
+    @include abstracts.text-preset-1();
+  }
+
+  &__text {
+    @include abstracts.text-preset-2();
+  }
+}

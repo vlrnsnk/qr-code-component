@@ -1,0 +1,9 @@
+@use '../abstracts';
+
+.main {
+  min-height: 100%;
+  background-color: abstracts.$color-slate-300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
