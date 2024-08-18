@@ -79,8 +79,8 @@ task('clean', (done) => {
 
 task('copyFiles', (done) => {
   src([
-    // 'src/*.ico',
     'src/fonts/**/*',
+    'src/*.ico',
   ], {
     encoding: false,
     base: 'src',
