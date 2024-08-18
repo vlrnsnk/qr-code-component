@@ -1,8 +1,9 @@
+@use '../abstracts';
+
 body {
   font-family: 'Outfit', 'Tahoma', sans-serif;
-  font-size: 22px;
   font-weight: 700;
-  line-height: 120%;
-  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
+
+  @include abstracts.text-preset-1();
 }

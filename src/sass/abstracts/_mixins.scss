@@ -1,0 +1,13 @@
+/* Text presets */
+
+@mixin text-preset-1() {
+  font-size: 22px;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2() {
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
