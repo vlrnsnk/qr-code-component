@@ -10,6 +10,7 @@
     "browser-sync": "^3.0.2",
     "cssnano": "^7.0.4",
     "del": "^7.1.0",
+    "gh-pages": "^6.1.1",
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
     "gulp-html-minifier-terser": "^7.1.0",
@@ -31,7 +32,9 @@
     "build": "gulp build",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"src/sass/**/*.scss\"",
-    "lint": "npm run editorconfig && npm run stylelint"
+    "lint": "npm run editorconfig && npm run stylelint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -42,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/vlrnsnk/qr-code-component/issues"
   },
-  "homepage": "https://github.com/vlrnsnk/qr-code-component#readme",
+  "homepage": "https://vlrnsnk.github.io/qr-code-component",
   "browserslist": [
     "last 2 versions",
     "not dead",
