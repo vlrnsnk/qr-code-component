@@ -22,11 +22,14 @@
 
   &__heading {
     margin-bottom: abstracts.$spacing-200;
+    color: abstracts.$color-slate-900;
 
     @include abstracts.text-preset-1();
   }
 
   &__text {
+    color: abstracts.$color-slate-500;
+
     @include abstracts.text-preset-2();
   }
 }
